@@ -1,0 +1,56 @@
+# Agentum90 - Week 1, Day 1
+# Topic: Python Data Structures for AI Workflows
+
+#Objective:
+Learn and practice core Python data structures (lists, tuples, dictionaries, sets) essential for handling AI datasets, feature storage, and preprocessing workflows.
+
+Overview:
+- Lists: Ordered, mutable sequences
+- Tuples: Ordered, immutable sequences
+- Dictionaries: Key-value mappings for structured data
+- Sets: Unique unordered collections, useful for removing duplicates
+
+Python Examples:
+
+# 1. Lists - Ordered and mutable
+features = ["age", "salary", "experience", "education"]
+print("Features List:", features)
+features.append("certifications")
+print("Updated Features List:", features)
+print("Access Feature at index 2:", features[2])
+
+# 2. Tuples - Ordered and immutable
+dimensions = (64, 128, 256)
+print("\nModel Dimensions Tuple:", dimensions)
+# dimensions[0] = 32  # Uncommenting will raise error
+
+# 3. Dictionaries - Key-value storage
+data_point = {"age": 25, "salary": 50000, "experience": 2}
+print("\nData Point Dictionary:", data_point)
+print("Salary of Data Point:", data_point["salary"])
+data_point["certifications"] = 3
+print("Updated Data Point:", data_point)
+
+# 4. Sets - Unordered, unique elements
+skills = {"Python", "ML", "Deep Learning", "Python"}
+print("\nSkills Set (duplicates removed):", skills)
+skills.add("NLP")
+print("Updated Skills Set:", skills)
+
+# 5. Combining Data Structures in AI workflows
+dataset = [
+    {"age": 25, "salary": 50000, "experience": 2},
+    {"age": 30, "salary": 70000, "experience": 5}
+]
+
+# Extract all salaries
+salaries = [data["salary"] for data in dataset]
+print("\nSalaries from Dataset:", salaries)
+
+# Unique experiences
+experiences = {data["experience"] for data in dataset}
+print("Unique Experiences in Dataset:", experiences)
+
+Notes:
+- These data structures form the foundation for preparing and handling datasets in ML/AI pipelines.
+- Practice by creating small datasets and manipulating them using lists, tuples, dictionaries, and sets.
